@@ -1,145 +1,187 @@
-/* styles.css */
+/\* styles.css \*/
 
+/\* Base styles \*/
 body {
-  margin: 0;
-  font-family: 'Rajdhani', sans-serif;
-  background-color: #0a0a0a;
-  color: #f0f0f0;
-  line-height: 1.6;
+margin: 0;
+font-family: 'Rajdhani', sans-serif;
+background-color: #0d1b2a;
+color: #e0e1dd;
+}
+
+img {
+max-width: 100%;
+height: auto;
 }
 
 a {
-  color: #00f0ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+text-decoration: none;
+color: inherit;
 }
 
-a:hover {
-  color: #ff00c8;
+h1, h2, h3 {
+margin: 0.5em 0;
 }
 
-header.hero {
-  background: linear-gradient(to bottom, #121212, #0a0a0a);
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-  position: relative;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+/\* Header Styles \*/
+.hero {
+background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/hero-bg.jpg') no-repeat center center/cover;
+color: #fff;
+text-align: center;
+padding: 5rem 1rem 3rem;
+position: relative;
 }
 
 .logo {
-  max-height: 60px;
+width: 180px;
+margin-bottom: 1rem;
+}
+
+.nav {
+display: flex;
+justify-content: center;
+gap: 2rem;
+margin-bottom: 2rem;
 }
 
 .nav a {
-  margin: 0 1rem;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.hero-text {
-  margin-top: 2rem;
+font-weight: 700;
+color: #64ffda;
+font-size: 1.1rem;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #00f0ff;
+font-size: 2.8rem;
+font-weight: 700;
+color: #ffffff;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
-  color: #cccccc;
+font-size: 1.2rem;
+color: #cbd5e1;
+margin: 1rem 0 2rem;
 }
 
 .btn {
-  display: inline-block;
-  background: #00f0ff;
-  color: #0a0a0a;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
+background-color: #64ffda;
+color: #0d1b2a;
+padding: 0.75rem 1.5rem;
+font-weight: 700;
+border-radius: 5px;
+transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background: #ff00c8;
-  color: #ffffff;
+.btn\:hover {
+background-color: #52e0c4;
 }
 
 .btn.small {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+font-size: 0.9rem;
+padding: 0.5rem 1rem;
 }
 
-section {
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
+/\* Product Section \*/
 .products {
-  background-color: #111111;
+padding: 4rem 1rem;
+text-align: center;
+background-color: #1b263b;
 }
 
-.products h2,
-.custom-builder h2,
-.about h2,
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #00f0ff;
+.products h2 {
+font-size: 2rem;
+color: #64ffda;
+margin-bottom: 2rem;
 }
 
 .product-list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+justify-items: center;
 }
 
 .product-card {
-  background-color: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+background-color: #0d1b2a;
+border: 1px solid #64ffda22;
+border-radius: 8px;
+padding: 1.5rem;
+text-align: left;
+color: #e0e1dd;
 }
 
 .product-card img {
-  width: 100%;
-  border-radius: 8px;
+border-radius: 6px;
+margin-bottom: 1rem;
 }
 
 .product-card h3 {
-  margin-top: 1rem;
-  color: #ffffff;
-}
-
-.product-card p {
-  color: #cccccc;
+color: #64ffda;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
 }
 
 .price {
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: block;
-  margin: 1rem 0;
-  color: #00f0ff;
+font-weight: 700;
+color: #ffffff;
+display: block;
+margin: 1rem 0;
+}
+
+/\* Custom Builder \*/
+.custom-builder {
+background-color: #0d1b2a;
+color: #ffffff;
+text-align: center;
+padding: 4rem 1rem;
+}
+
+.custom-builder h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: #64ffda;
+}
+
+/\* About \*/
+.about {
+padding: 4rem 1rem;
+background-color: #1b263b;
+color: #ffffff;
+text-align: center;
+}
+
+.about h2 {
+color: #64ffda;
+}
+
+/\* Contact \*/
+.contact {
+padding: 4rem 1rem;
+background-color: #0d1b2a;
+text-align: center;
+color: #ffffff;
+}
+
+.contact h2 {
+color: #64ffda;
 }
 
 footer {
-  background: #0a0a0a;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #777;
+padding: 2rem 1rem;
+text-align: center;
+background-color: #0b1623;
+color: #94a3b8;
+font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+.hero-text h1 {
+font-size: 3.5rem;
+}
+
+.hero-text p {
+font-size: 1.4rem;
+}
+
+.btn {
+font-size: 1.1rem;
+}
 }
