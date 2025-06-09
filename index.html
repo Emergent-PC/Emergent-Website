@@ -1,288 +1,74 @@
-<!doctype html><html lang="en"><head>
-    <title>Clean &amp; Square free template - Home</title>
-    <meta charset="UTF-8">
-    <meta name="generator" content="Silex v2.2.14">
-
-    
-    
-
-    <script src="js/jquery.js"></script>
-    
-    
-    <script src="js/front-end.js"></script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/front-end.css">
-
-    
-
-    
-
-    
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" class="silex-custom-font"><meta name="viewport" content="width=device-width, initial-scale=1"><script class="silex-script"></script><script src="js/script.js"></script><link href="css/styles.css" rel="stylesheet"><style>body { opacity: 0; transition: .25s opacity ease; }</style></head>
-
-<body class="body-initial all-style enable-mobile prevent-resizable prevent-selectable editable-style silex-runtime silex-published" data-current-page="page-home">
-    
-    
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-    
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container-element editable-style silex-id-1483130857943-13 section-element small-height website-min-width hide-on-mobile prevent-resizable">
-        <div class="editable-style silex-element-content website-width silex-id-1483130857943-12 container-element"></div>
-    </div><header class="container-element editable-style silex-id-1483130355289-7 section-element website-min-width prevent-resizable">
-        
-    <div class="editable-style silex-element-content website-width silex-id-1483130355289-6 container-element">
-            
-            
-
-        <div class="editable-style silex-id-1552772425150-3 text-element silex-component prevent-resizable hamburger-menu prevent-auto-z-index hide-on-desktop"><div class="silex-element-content normal">
-<!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
-<div class="hamburger-menu_1731477128948_384 closed">
-    <div class="hamburger-btn ">
-      <span></span>
-      <span></span>
-      <span></span>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergent PC | Custom Gaming PCs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container">
+      <img src="assets/logo.png" alt="Emergent PC Logo" class="logo" />
+      <nav class="nav">
+        <a href="#prebuilts">Pre-Built PCs</a>
+        <a href="#custom">Custom Builder</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="nav-container">
-      <div class="prevent-scale">
-        <nav class="">
-            <ul>
-            
-                <li><a href="index.html" class="page-link-active">Home</a></li>
-            
-                <li><a href="contact.html" class="">Contact</a></li>
-            
-                <li><a href="https://www.silex.me/">Powered by Silex</a></li>
-            
-            </ul>
-        </nav>
+    <div class="hero-text">
+      <h1>Unleash the Power of PC Gaming</h1>
+      <p>High-performance pre-built and custom-built gaming rigs, crafted in Australia.</p>
+      <a href="#prebuilts" class="btn">Shop Now</a>
+    </div>
+  </header>
+
+  <section id="prebuilts" class="products">
+    <h2>Pre-Built PCs</h2>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="assets/pc1.png" alt="Entry-Level PC">
+        <h3>Entry-Level Ryzen 5 Gaming PC</h3>
+        <p>Perfect for esports titles and 1080p gaming.</p>
+        <span class="price">$999 AUD</span>
+        <a href="#" class="btn small">View</a>
       </div>
-  </div>
-</div>
-<script>
-(function() {
-  var isOpen = false;
-  function close() {
-    isOpen = false;
-    document.querySelector('.hamburger-menu_1731477128948_384').classList.remove('open');
-    document.querySelector('.hamburger-menu_1731477128948_384').classList.add('closed');
-  }
-  function open() {
-    isOpen = true;
-    document.querySelector('.hamburger-menu_1731477128948_384').classList.add('open');
-    document.querySelector('.hamburger-menu_1731477128948_384').classList.remove('closed');
-  }
-  function toggle() {
-    if(isOpen) close();
-    else open();
-  }
-  function scrollOrResize() {
-    close();
-    move();
-  }
-  var silexElement = document.querySelector('.hamburger-menu_1731477128948_384').closest('.editable-style');
-  function move() {
-    var data = window.silex
-    var rect = silexElement.getBoundingClientRect();
-    var offset = {
-      top: rect.top + data.scrollTop,
-      left: rect.left + data.scrollLeft,
-    };
-    var container = document.querySelector('.hamburger-menu_1731477128948_384 .nav-container');
-    container.style.transform = 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)';
-  }
-  document.querySelector('.hamburger-menu_1731477128948_384 .hamburger-btn').addEventListener('click', function() { toggle(); });
-  document.addEventListener('resize', scrollOrResize);
-  document.addEventListener('scroll', scrollOrResize);
-  scrollOrResize()
-  setTimeout(() => scrollOrResize(), 0)
-})();
-</script>
-</div></div><div class="editable-style container-element silex-id-1594114016137-2 hide-on-desktop"></div><div class="editable-style text-element silex-id-1436036521917-4 nav hide-on-mobile">
-                    <div class="silex-element-content normal">
-                        <p><a href="contact.html" class="">CONTACT</a>
-                    </p></div>
-                </div><a class="editable-style image-element silex-id-1436036524431-29 page-link-active" href="index.html"><img src="assets/logo.png"></a><div class="editable-style text-element silex-id-1436036522018-5 nav hide-on-mobile">
-                    <div class="silex-element-content normal"><p>
-                        <a href="index.html" class="page-link-active">HOME</a>
-                    </p></div>
-                </div></div></header><section class="container-element editable-style silex-id-1483131519736-31 section-element website-min-width prevent-resizable page-home paged-element paged-element-visible">
-        <div class="editable-style silex-element-content website-width silex-id-1483131519736-30 container-element">
-            
-        <div class="editable-style text-element silex-id-1436036524230-27">
-                <div class="silex-element-content normal"><h2>
+      <div class="product-card">
+        <img src="assets/pc2.png" alt="Mid-Tier PC">
+        <h3>Mid-Tier Intel i5 RTX 4060</h3>
+        <p>Next-gen gaming performance at an affordable price.</p>
+        <span class="price">$1,499 AUD</span>
+        <a href="#" class="btn small">View</a>
+      </div>
+    </div>
+  </section>
 
-Passionate about building the best custom PCs for your needs&nbsp;<br></h2>
-                    
-                </div>
-            </div></div>
-    </section><section class="container-element editable-style section-element silex-id-1483130397853-8 website-min-width prevent-resizable page-home paged-element paged-element-visible">
-        
-    <div class="editable-style silex-element-content website-width container-element silex-id-1483130397854-9">
-            
-            
+  <section id="custom" class="custom-builder">
+    <h2>Build Your Own</h2>
+    <p>Use our upcoming configurator to create your dream rig from trusted components.</p>
+    <a href="#" class="btn">Coming Soon</a>
+  </section>
 
-            
-        <div class="editable-style text-element full-width grey-text silex-id-1436036523928-24 hide-on-mobile">
-                <div class="silex-element-content normal">
-                    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                </div>
-            </div><div class="editable-style text-element product-details silex-id-1436036523626-21">
-                <div class="silex-element-content normal">
-                    <h3>
+  <section id="about" class="about">
+    <h2>About Emergent PC</h2>
+    <p>We're a small Australian business specialising in high-performance gaming desktops for all skill levels and budgets. Whether you're just starting out or chasing ultra settings, we’ve got your back.</p>
+  </section>
 
-AMD Ryzen 5 7600 + Galax RTX 4060 Gamdias Argus E4 Elite Entry Level Gaming PC
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or ready to order? Reach out to us and we’ll respond promptly.</p>
+    <a href="mailto:support@emergent-pc.com" class="btn">Email Us</a>
+  </section>
 
-</h3>
-                    
-                        
-                    
-                    
-                        <p>
+  <footer>
+    <p>&copy; 2025 Emergent PC. All rights reserved.</p>
+  </footer>
+</body>
 
-Discover the power and performance of our entry-level gaming desktop, designed for both casual gamers and home office users. Equipped with an AMD Ryzen 5 7600 processor, NVIDIA RTX 4060 graphics, and 16GB of high-speed DDR5 RAM, this build offers smooth gameplay, multitasking, and upgradability. Housed in a sleek, RGB-lit Gamdias Argus E4 Elite case, it combines aesthetics with functionality, making it a perfect fit for any setup. Affordable, reliable, and built for future upgrades—get ready to game, work, and create with Emergent PC.
-
-</p><p><a href="https://www.ebay.com.au/itm/226358227579"><b>MORE</b></a></p>
-                    
-                </div>
-            </div><div class="editable-style image-element silex-id-1483131239727-16"><img src="assets/PC1.png"></div></div></section><footer class="container-element editable-style section-element silex-id-1483130400381-10 website-min-width prevent-resizable">
-        <div class="editable-style silex-element-content website-width container-element silex-id-1483130400382-11">
-            <div class="editable-style text-element silex-id-1436036522220-7 full-width small-text style-centered">
-                <div class="silex-element-content normal">
-
-© 2024 Emergent PC. All Rights Reserved.
-
-</div>
-            </div>
-        </div>
-    </footer></body></html>
+</html>
