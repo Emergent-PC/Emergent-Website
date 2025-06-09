@@ -1,33 +1,35 @@
 
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* styles.css */
+
+:root {
+  --dark-blue: #0B0E20;
+  --dark-gray: #121530;
+  --neon-green: #A4FF7D;
+  --text-light: #D1D5DB;
+  --accent-blue: #00BFFF;
+  --font-title: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
-  line-height: 1.6;
-}
-
-a {
-  color: #00FF7F;
-  text-decoration: none;
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--dark-blue);
+  color: var(--text-light);
 }
 
 header.hero {
-  background-color: #050d2a;
+  background-color: var(--dark-gray);
+  color: var(--text-light);
+  padding: 2rem;
   text-align: center;
-  padding: 3rem 1rem;
   position: relative;
 }
 
 .logo {
-  max-width: 220px;
-  margin: 0 auto 1.5rem;
+  width: 150px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
 .nav {
@@ -35,149 +37,110 @@ header.hero {
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
-  font-weight: 600;
+  font-family: var(--font-title);
 }
 
 .nav a {
-  color: #00f0ff;
-  transition: color 0.3s ease;
+  color: var(--neon-green);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
 }
 
 .nav a:hover {
-  color: #72ff7e;
+  color: var(--accent-blue);
 }
 
 .hero-text h1 {
-  color: #d3d4e0;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .hero-text p {
-  color: #c2c3d0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
 }
 
 .btn {
   display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
   background-color: transparent;
-  border: 2px solid #00f0ff;
-  color: #00f0ff;
-  padding: 0.6rem 1.2rem;
-  margin: 0 0.5rem;
-  border-radius: 5px;
+  text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
 .btn:hover {
-  background-color: #00f0ff;
-  color: #050d2a;
+  background-color: var(--neon-green);
+  color: var(--dark-blue);
 }
 
-/* Product Section */
-.products {
-  background-color: #07163f;
-  padding: 3rem 1rem;
+section {
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.products h2 {
-  color: #00f0ff;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+.products h2,
+.custom-builder h2,
+.about h2,
+.contact h2 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--neon-green);
+  margin-bottom: 1rem;
 }
 
 .product-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .product-card {
-  background-color: #0e1b47;
-  border-radius: 10px;
+  background-color: var(--dark-gray);
   padding: 1rem;
-  width: 280px;
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
 }
 
 .product-card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .product-card h3 {
-  color: #00f0ff;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  color: var(--neon-green);
+  font-family: var(--font-title);
+  margin: 1rem 0 0.5rem;
 }
 
 .product-card p {
-  font-size: 1rem;
-  color: #d3d4e0;
-  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
 }
 
-.price {
-  background-color: #00f0ff;
-  color: #050d2a;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
+.product-card .price {
   font-weight: bold;
+  color: var(--accent-blue);
 }
 
-/* Custom Builder */
-.custom-builder {
-  padding: 3rem 1rem;
-  background-color: #061233;
-  text-align: center;
-}
-
-.custom-builder h2 {
-  color: #d3d4e0;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.custom-builder p {
-  font-size: 1.1rem;
-  color: #b0b2c3;
-}
-
-/* About & Contact */
-.about, .contact {
-  padding: 3rem 1rem;
-  background-color: #050d2a;
-  text-align: center;
-}
-
-.about h2, .contact h2 {
-  color: #00f0ff;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-.about p, .contact p {
-  color: #c2c3d0;
-  font-size: 1.1rem;
-}
-
-/* Footer */
 footer {
+  background-color: var(--dark-gray);
+  color: var(--text-light);
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #030a20;
+  padding: 1rem;
   font-size: 0.9rem;
-  color: #a0a3b0;
+  margin-top: 2rem;
 }
